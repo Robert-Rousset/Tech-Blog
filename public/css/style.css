@@ -1,0 +1,12 @@
+:root{
+  --primary: rgb(37, 150, 190);
+  --secondary: rgb(118,168,192);
+  --dark:rgb(34, 66, 95);
+  --light: rgb(239, 241, 243);
+  --complimentary: rgb(184, 116, 96);
+}
+* {
+  padding: 0px;
+  margin: 0px;
+  scroll-behavior: smooth;
+}
