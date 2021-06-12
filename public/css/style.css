@@ -190,7 +190,7 @@ p {
   text-align: center;
 }
 
-.username, .password {
+.usernameLogin, .passwordLogin, .passwordSignup, .usernameSignup{
   font-size: larger;
   height: 30px;
   margin-left: auto;
