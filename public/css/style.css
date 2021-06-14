@@ -206,7 +206,7 @@ p {
 ::-webkit-input-placeholder{
   color: rgb(179, 179, 179);
 }
-.loginButton {
+#loginButton, #signupButton {
   margin: auto;
   padding-top: 5px;
   padding-bottom: 5px;

@@ -15,10 +15,6 @@ Blog.init(
         type: DataTypes.STRING,
         allowNull: false,
     },
-    date: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-    },
     content: {
         type: DataTypes.STRING,
         allowNull: false,
