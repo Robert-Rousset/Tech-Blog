@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const { User, Blog } = require("../../models");
 
-router.post('/', async (req, res) => {
+router.post("/", async (req, res) => {
   try {
     const dbUserData = await User.create({
       username: req.body.username,
@@ -48,16 +48,13 @@ router.post("/login", async (req, res) => {
   }
 });
 
-router.post("/post", async (req, res) =>{
-  try{ 
-    const blogData = await Blog.create({
-    title: req.body.title,
-    content: req.body.content,
-  })
-} catch (err) {
-  console.log(err);
-  res.status(500).json(err);
-}
-})
-
+router.post("/logout", (req, res) => {
+  if (req.session.loggedIn) {
+    req.session.destroy(() => {
+      res.status(204).end();
+    });
+  } else {
+    res.status(404).end();
+  }
+});
 module.exports = router;
