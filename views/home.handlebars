@@ -1,21 +1,26 @@
 <section>
   {{#each blogs as |blog|}}
     <div class="container">
+      <a data-set="{{blog.id}}" class="blog" href="/viewPost/{{blog.id}}">
 
-      <aside id="blog">
+        <aside>
 
-        <h2>{{blog.title}}</h2>
-        <p>
-          <i><b>Posted on: {{blog.createdAt}}</b></i>
-        </p>
-      </aside>
+          <h2>{{blog.title}}</h2>
+          <p>
+            <i><b>Posted on: {{blog.createdAt}}</b></i>
+          </p>
+
+        </aside>
+      </a>
 
       <div class="card">
         <p>
           {{blog.content}}
         </p>
-
+        <br />
       </div>
     </div>
   {{/each}}
 </section>
+
+<script src="/js/viewPost.js"></script>

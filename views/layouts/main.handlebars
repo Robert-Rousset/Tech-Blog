@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tech Blog</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Odibee+Sans&family=Quicksand:wght@700&display=swap"
@@ -16,11 +16,11 @@
       <h1>Tech-Blog</h1>
       <nav>
         <a href="/">Home</a>
-        <a href="./dashboard">Dashaboard</a>
+        <a href="/dashboard">Dashaboard</a>
         {{#if loggedIn}}
           <a id="logout" href="">Logout</a>
         {{else}}
-          <a href="./login">Login</a>
+          <a href="/login">Login</a>
         {{/if}}
 
       </nav>
@@ -33,6 +33,4 @@
       <script src="/js/logout.js"></script>
     {{/if}}
   </body>
-
-  <script src="/js/createPost.js"></script>
 </html>

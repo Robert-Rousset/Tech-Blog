@@ -3,14 +3,15 @@ const { User, Blog } = require("../../models");
 
 router.post("/", async (req, res) => {
   try {
-    const dbUserData = await User.create({
+    const user = await User.create({
       username: req.body.username,
       password: req.body.password,
     });
 
     req.session.save(() => {
       req.session.loggedIn = true;
-      res.status(200).json(dbUserData);
+      req.session.userId = user.id;
+      res.status(200).json(user);
     });
   } catch (err) {
     console.log(err);
@@ -20,16 +21,16 @@ router.post("/", async (req, res) => {
 
 router.post("/login", async (req, res) => {
   try {
-    const userData = await User.findOne({
+    const user = await User.findOne({
       where: {
         username: req.body.username,
       },
     });
-    if (!userData) {
+    if (!user) {
       res.status(400).json({ message: "Incorrect email or password." });
       return;
     }
-    const validPassword = await userData.checkPassword(req.body.password);
+    const validPassword = await user.checkPassword(req.body.password);
 
     if (!validPassword) {
       res.status(400).json({ message: "Incorrect email or password." });
@@ -39,9 +40,8 @@ router.post("/login", async (req, res) => {
     req.session.save(() => {
       req.session.loggedIn = true;
 
-      res
-        .status(200)
-        .json({ user: userData, message: "You are now logged in!" });
+      req.session.userId = user.id;
+      res.status(200).json({ user: user, message: "You are now logged in!" });
     });
   } catch (error) {
     res.status(500).json(error);
