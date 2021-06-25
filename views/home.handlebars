@@ -1,6 +1,7 @@
 <section>
   {{#each blogs as |blog|}}
     <div class="container">
+
       <aside id="blog">
 
         <h2>{{blog.title}}</h2>
@@ -8,6 +9,7 @@
           <i><b>Posted on: {{blog.createdAt}}</b></i>
         </p>
       </aside>
+
       <div class="card">
         <p>
           {{blog.content}}
@@ -16,11 +18,4 @@
       </div>
     </div>
   {{/each}}
-  <div class="comment">
-    <h4></h4>
-    <h5></h5>
-    <p>
-
-    </p>
-  </div>
 </section>
