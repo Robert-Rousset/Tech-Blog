@@ -46,7 +46,8 @@ async function signup(event) {
       setTimeout(turnOffText, 5000)
       function turnOffText(){
         signupError.setAttribute("id", "is-white")
-      }    
+      }
+      console.log(response)      
     }
   }
 }
