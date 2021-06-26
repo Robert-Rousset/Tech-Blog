@@ -41,14 +41,12 @@ async function signup(event) {
     if (response.ok) {
       document.location.replace("/");
     } else {
-      // const signupError = document.querySelector(".incorrectSignup")
-      // signupError.removeAttribute("id", "is-white")
-      // setTimeout(turnOffText, 5000)
-      // function turnOffText(){
-      //   signupError.setAttribute("id", "is-white")
-      // }
-      // console.log(response)   
-      alert("Failed to sign up.")   
+      const signupError = document.querySelector(".incorrectSignup")
+      signupError.removeAttribute("id", "is-white")
+      setTimeout(turnOffText, 5000)
+      function turnOffText(){
+        signupError.setAttribute("id", "is-white")
+      }
     }
   }
 }

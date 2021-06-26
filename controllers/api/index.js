@@ -8,7 +8,7 @@ const editPostRoute = require("./edit.js");
 router.use("/users", userRoutes);
 router.use("/post", postRoutes);
 router.use("/comment", commentRoutes);
-router.use("/viewPost", viewPostRoute);
+router.use("/viewpost", viewPostRoute);
 router.use("/edit", editPostRoute);
 
 module.exports = router;
