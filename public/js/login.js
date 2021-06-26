@@ -25,9 +25,7 @@ const login = async (event) => {
   }
 };
 
-async function signup(event) {
-  event.preventDefault();
-
+async function signup(_event) {
   const username = document.querySelector(".usernameSignup").value.trim();
   const password = document.querySelector(".passwordSignup").value.trim();
 
