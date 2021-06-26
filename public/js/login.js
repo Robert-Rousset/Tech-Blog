@@ -17,6 +17,10 @@ const login = async (event) => {
     } else {
       const loginArea = document.querySelector(".incorrectLogin")
       loginArea.removeAttribute("id", "is-white")
+      setTimeout(turnOffText, 5000)
+      function turnOffText(){
+        loginArea.setAttribute("id", "is-white")
+      }    
     }
   }
 };
@@ -41,8 +45,8 @@ async function signup(event) {
       signupError.removeAttribute("id", "is-white")
 
 
-      setTimeout(reloadpage, 5000)
-      function reloadpage(){
+      setTimeout(turnOffText, 5000)
+      function turnOffText(){
         signupError.setAttribute("id", "is-white")
       }    
     }
