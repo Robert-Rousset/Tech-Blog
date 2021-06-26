@@ -2,14 +2,10 @@
   <div class="container">
 
     <aside class="aside">
-
       <h2>{{post.title}}</h2>
-      <p>
-        <i><b class="date">Posted on: {{format_date post.createdAt}}<br />{{format_time
-                  post.createdAt
-                }}</b></i>
-      </p>
-
+      <p><i><b class="date">
+            {{format_date post.createdAt}},
+            {{format_time post.createdAt}}</b></i></p>
     </aside>
 
     <div class="card">
@@ -23,19 +19,21 @@
     </div>
   </div>
 
-   <div class="comment">
-          <h4>Comments</h4>
-      {{#each post.comments as |comment|}}
-          
-        <i><b class="date">{{format_date comment.createdAt}},  {{format_time comment.createdAt}}</b></i>
+  <div class="comment">
+    <h4>Comments</h4>
+    {{#each post.comments as |comment|}}
+      <i><b class="date">{{format_date comment.createdAt}},
+          {{format_time comment.createdAt}}</b></i>
+      <h5>{{comment.user.username}}</h5>
+      <p>
+        {{comment.content}}
+      </p>
+    {{/each}}
 
-          <h5>{{comment.user.username}}</h5> 
-          <p>
-            {{comment.content}}
-          </p>
-{{/each}}
-          
-          <input placeholder="Leave A Comment" class="leaveComment"><button id="submitComment">Submit</button>
+    <input placeholder="Leave A Comment" class="leaveComment" /><button
+      id="submitComment"
+    >Submit</button>
+  </div>
 
 </section>
 <script src="/js/createComment.js"></script>

@@ -81,7 +81,7 @@ aside p,
 .date {
   float: right;
   color: grey;
-  margin-top: 50 auto;
+  margin-top: 50px auto;
   margin-left: auto;
   display: inline;
   min-width: 150px;
