@@ -28,6 +28,27 @@ header {
   border-left: var(--light) 3px solid;
   background-color: white;
 }
+textarea {
+  height: 300px;
+  font-family: "Quicksand", sans-serif;
+  padding: 10px;
+  resize: none;
+}
+.incorrectLogin{
+  font-size: 15px;
+  color: red;
+  font-family: "Quicksand", sans-serif;
+  text-align: center;
+}
+.incorrectSignup{
+  font-size: 15px;
+  color: rgb(1, 136, 42);
+  font-family: "Quicksand", sans-serif;
+  text-align: center;
+}
+#is-white{
+  color: white;
+}
 h1 {
   font-family: "Quicksand", sans-serif;
   font-size: 50px;
@@ -88,11 +109,17 @@ aside p,
   font-size: 14px;
   height: 20px;
 }
+.by{
+  margin-left: 20px;
+  font-weight: bold;
+  color: var(--dark)
 
+}
 .container {
   flex-direction: column;
   margin: auto;
   margin-top: 30px;
+  margin-bottom: 5px;
   min-width: 80%;
   background-color: white;
   height: fit-content;
@@ -140,24 +167,44 @@ i {
   background-color: white;
   width: 100%;
   height: fit-content;
+  box-shadow: 0px 0px 10px rgba(211, 211, 211, 0.8);
+  border-radius: 10px;
 }
 .box h2 {
   padding-top: 20px;
-  margin-left: 50px;
+  margin-left: 30px;
 }
 .title,
 .content {
+  
+  font-family: "Lato", sans-serif;
+  border: none;
+  border-top: 3px solid rgb(233, 233, 233);
+  border-bottom: 3px solid rgb(240, 240, 240);
+  padding-left: 50px;
   font-size: larger;
-  height: 30px;
+  height: 3rem;
   margin-top: 20px;
-  margin-bottom: 20px;
-  margin-left: 10%;
-  margin-right: 10%;
   justify-content: center;
-  width: 80%;
+  width: 100%;
+  background-color: rgb(245, 245, 245,.3);
+  box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.5);
 }
 .content {
-  height: 100px;
+  height: 20rem;
+}
+.title:focus,
+.content:focus{
+  outline: none;
+  transition: ease-in 2s;
+  background-color: white;
+  padding-left: 30px;
+  border-top: 3px solid rgb(233, 233, 233, .7);
+  border-bottom: 3px solid rgb(240, 240, 240, .7);
+}
+.title{
+  font-weight: 900;
+  font-size: x-large;
 }
 
 #is-hidden {
@@ -165,14 +212,18 @@ i {
 }
 
 .submit {
+  position: relative;
   padding: 10px;
   font-family: "Quicksand", sans-serif;
   color: var(--light);
   font-size: 25px;
   background-color: var(--secondary);
-  width: 100%;
+  width: 20%;
+  bottom: -30px;
+  left: 15rem;
   border: none;
   border-radius: 5px;
+  box-shadow: 0px 0px 20px rgb(138, 138, 138,.7) ;
 }
 .edit {
   padding: 10px;
@@ -183,6 +234,7 @@ i {
   border: none;
   border-radius: 5px;
   float: right;
+  box-shadow: 0px 0px 20px rgb(138, 138, 138,.7) ;
 }
 
 .submit:hover,
@@ -302,4 +354,18 @@ i {
 .delete:hover,
 .submitEdit:hover {
   background-color: var(--primary);
+}
+
+.footer{
+
+  margin-top: 20px;
+  height: 50px;
+  background-color: rgb(240, 240, 240);
+  text-align: center;
+  width: 100%;
+  bottom: 0px;
+
+}
+.space {
+  height: 100px;
 }

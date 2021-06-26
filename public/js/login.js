@@ -2,7 +2,8 @@ const login = async (event) => {
   event.preventDefault();
 
   const username = document.querySelector(".usernameLogin").value.trim();
-  const password = document.querySelector(".passwordLogin").value.trim();
+  const password = document.querySelector(".passwordLogin")
+  console.log(password)
 
   if (username && password) {
     const response = await fetch("api/users/login", {
@@ -14,7 +15,8 @@ const login = async (event) => {
     if (response.ok) {
       document.location.replace("/");
     } else {
-      alert("Failed to log in.");
+      const loginArea = document.querySelector(".incorrectLogin")
+      loginArea.removeAttribute("id", "is-white")
     }
   }
 };
@@ -35,8 +37,14 @@ async function signup(event) {
     if (response.ok) {
       document.location.replace("/");
     } else {
-      const error = await response.json();
-      alert(error);
+      const signupError = document.querySelector(".incorrectSignup")
+      signupError.removeAttribute("id", "is-white")
+
+
+      setTimeout(reloadpage, 5000)
+      function reloadpage(){
+        signupError.setAttribute("id", "is-white")
+      }    
     }
   }
 }
