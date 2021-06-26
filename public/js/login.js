@@ -43,8 +43,6 @@ async function signup(event) {
     } else {
       const signupError = document.querySelector(".incorrectSignup")
       signupError.removeAttribute("id", "is-white")
-
-
       setTimeout(turnOffText, 5000)
       function turnOffText(){
         signupError.setAttribute("id", "is-white")
