@@ -1,5 +1,4 @@
 const router = require("express").Router();
-const withAuth = require("../../utils/auth");
 const { User, Blog, Comment } = require("../../models");
 
 router.get("/:id", async (req, res) => {
@@ -12,6 +11,7 @@ router.get("/:id", async (req, res) => {
           include: [{ model: User, attributes: ["username"] }],
         },
       ],
+      order: [[{ model: Comment}, "createdAt", "DESC"]],
     });
 
     const post = dbPostData.get({ plain: true });

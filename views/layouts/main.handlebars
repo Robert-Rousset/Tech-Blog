@@ -5,22 +5,22 @@
     <title>Tech Blog</title>
     <link rel="stylesheet" type="text/css" href="/css/style.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
     <link
       href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Odibee+Sans&family=Quicksand:wght@700&display=swap"
       rel="stylesheet"
     />
   </head>
-
   <body>
     <header>
       <h1>Tech-Blog</h1>
       <nav>
-        <a href="/">Home</a>
-        <a href="/dashboard">Dashaboard</a>
+        <a class="navbarButton" href="/">Home</a>
+        <a class="navbarButton" href="/dashboard">Dashboard</a>
         {{#if loggedIn}}
-          <a id="logout" href="">Logout</a>
+          <a class="navbarButton" id="logout" href="">Logout</a>
         {{else}}
-          <a href="/login">Login</a>
+          <a class="navbarButton" href="/login">Login</a>
         {{/if}}
 
       </nav>

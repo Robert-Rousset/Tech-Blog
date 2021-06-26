@@ -186,8 +186,14 @@ i {
 }
 
 .submit:hover,
-.edit:hover {
+.edit:hover
+{
   background-color: var(--primary);
+  transition: ease-in-out 0.5s;
+}
+.navbarButton:hover {
+  color: rgb(255, 255, 255);
+  text-shadow: 0px 0px 10px white;
   transition: ease-in-out 0.5s;
 }
 .login {
@@ -241,6 +247,14 @@ i {
   color: var(--light);
   border: none;
   border-radius: 5px;
+}
+#loginButton:hover,
+#signupButton:hover,
+#submitComment:hover{
+  background-color: var(--primary);
+  color: rgb(255, 255, 255);
+  text-shadow: 0px 0px 10px white;
+  transition: ease-in-out 0.5s;
 }
 .aside:hover {
   background-color: var(--secondary);
