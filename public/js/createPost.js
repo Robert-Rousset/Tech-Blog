@@ -1,4 +1,12 @@
 const submit = document.querySelector(".submit");
+const addNewPost = document.querySelector(".addPost");
+const postBox = document.querySelector(".box");
+
+function hideAndShow(event) {
+  event.preventDefault();
+  addNewPost.setAttribute("id", "is-hidden");
+  postBox.removeAttribute("id", "is-hidden");
+}
 
 async function blogPost() {
   const content = document.querySelector(".content").value.trim();
@@ -14,7 +22,10 @@ async function blogPost() {
       document.querySelector(".content").value = "";
       document.querySelector(".title").value = "";
       alert("Your Blog Post has been published");
+      document.location.reload();
     }
   }
 }
+
+addNewPost.addEventListener("click", hideAndShow);
 submit.addEventListener("click", blogPost);

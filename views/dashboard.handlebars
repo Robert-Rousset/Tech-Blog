@@ -1,9 +1,44 @@
 <section>
-  <div class="box">
+  <div class="addPost">
+  <a href=""><h1>Add Post +</h1></a>
+  </div>
+  <div id="is-hidden" class="box">
     <h2>Create a Post:</h2>
     <input placeholder="Title" class="title" />
     <input placeholder="What's on your mind?" class="content" />
     <button class="submit">SUBMIT</button>
   </div>
+</section>
+<section class="userBlogs">
+  {{#each user.blogs as |blog|}}
+  <div class="blog">
+   <a data-set="{{blog.id}}" href="/api/viewPost/{{blog.id}}">
+
+        <aside class="aside">
+
+          <h2>{{blog.title}}</h2>
+          <p>
+            <i><b class="date">
+                {{format_date blog.createdAt}},
+                {{format_time blog.createdAt}}</b></i>
+          </p>
+
+        </aside>
+      </a>
+
+      <div class="card">
+
+        <p>
+          {{blog.content}}
+        </p>
+
+        <br />
+                          <button class="edit"><a href="/api/edit/{{blog.id}}">Edit Post</a></button>
+      </div>
+        
+    </div>
+
+    </div>
+  {{/each}}
 </section>
 <script src="/js/createPost.js"></script>

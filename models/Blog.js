@@ -12,12 +12,12 @@ Blog.init(
       autoIncrement: true,
     },
     title: {
-        type: DataTypes.STRING,
-        allowNull: false,
+      type: DataTypes.STRING,
+      allowNull: false,
     },
     content: {
-        type: DataTypes.STRING,
-        allowNull: false,
+      type: DataTypes.TEXT,
+      allowNull: false,
     },
     user_id: {
       type: DataTypes.INTEGER,
@@ -35,4 +35,4 @@ Blog.init(
   }
 );
 
-module.exports = Blog
+module.exports = Blog;

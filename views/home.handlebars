@@ -1,9 +1,9 @@
 <section>
   {{#each blogs as |blog|}}
     <div class="container">
-      <a data-set="{{blog.id}}" class="blog" href="/viewPost/{{blog.id}}">
+      <a data-set="{{blog.id}}" class="blog" href="/api/viewPost/{{blog.id}}">
 
-        <aside>
+        <aside class="aside">
 
           <h2>{{blog.title}}</h2>
           <p>
