@@ -5,7 +5,9 @@
 
       <h2>{{post.title}}</h2>
       <p>
-        <i><b>Posted on: {{post.createdAt}}</b></i>
+        <i><b class="date">Posted on: {{format_date post.createdAt}}<br />{{format_time
+                  post.createdAt
+                }}</b></i>
       </p>
 
     </aside>
@@ -16,9 +18,28 @@
       </p>
       <br />
       <p>
-        -{{user.username}}
+        -{{post.user.username}}
       </p>
     </div>
   </div>
+
+   <div class="comment">
+          <h4>Comments</h4>
+          <p>
+        <i><b class="date">{{format_date post.createdAt}}<br />{{format_time
+                  post.createdAt
+                }}</b></i>
+      </p>
+          <h5>Bobert Bouchet</h5> 
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
+            expedita quod nostrum rerum cum excepturi minus quia possimus sint
+            quasi vero voluptatibus fugiat beatae pariatur et culpa, ad ex
+            voluptatum soluta laboriosam similique rem veniam. Voluptates eos
+            fugiat facilis unde eligendi animi, sequi numquam nisi, dicta
+            distinctio hic dolore esse vero accusantium. Reprehenderit dolore
+            ullam exercitationem tenetur corporis animi aut.
+          </p>
+          <input placeholder="Leave A Comment" class="leaveComment"><button id="submitComment">Submit</button>
 
 </section>

@@ -7,7 +7,9 @@
 
           <h2>{{blog.title}}</h2>
           <p>
-            <i><b>Posted on: {{blog.createdAt}}</b></i>
+            <i><b class="date">
+                {{format_date blog.createdAt}},
+                {{format_time blog.createdAt}}</b></i>
           </p>
 
         </aside>
