@@ -1,9 +1,6 @@
 const submit = document.querySelector(".submit");
 
-async function blogPost(event) {
-  event.preventDefault();
-  console.log("YEEE");
-
+async function blogPost() {
   const content = document.querySelector(".content").value.trim();
   const title = document.querySelector(".title").value.trim();
 

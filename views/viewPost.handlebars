@@ -25,21 +25,17 @@
 
    <div class="comment">
           <h4>Comments</h4>
+      {{#each post.comments as |comment|}}
+          
+        <i><b class="date">{{format_date comment.createdAt}},  {{format_time comment.createdAt}}</b></i>
+
+          <h5>{{comment.user.username}}</h5> 
           <p>
-        <i><b class="date">{{format_date post.createdAt}}<br />{{format_time
-                  post.createdAt
-                }}</b></i>
-      </p>
-          <h5>Bobert Bouchet</h5> 
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
-            expedita quod nostrum rerum cum excepturi minus quia possimus sint
-            quasi vero voluptatibus fugiat beatae pariatur et culpa, ad ex
-            voluptatum soluta laboriosam similique rem veniam. Voluptates eos
-            fugiat facilis unde eligendi animi, sequi numquam nisi, dicta
-            distinctio hic dolore esse vero accusantium. Reprehenderit dolore
-            ullam exercitationem tenetur corporis animi aut.
+            {{comment.content}}
           </p>
+{{/each}}
+          
           <input placeholder="Leave A Comment" class="leaveComment"><button id="submitComment">Submit</button>
 
 </section>
+<script src="/js/createComment.js"></script>
