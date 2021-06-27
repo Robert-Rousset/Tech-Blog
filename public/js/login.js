@@ -2,8 +2,7 @@ const login = async (event) => {
   event.preventDefault();
 
   const username = document.querySelector(".usernameLogin").value.trim();
-  const password = document.querySelector(".passwordLogin")
-  console.log(password)
+  const password = document.querySelector(".passwordLogin").value.trim();
 
   if (username && password) {
     const response = await fetch("api/users/login", {
