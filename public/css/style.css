@@ -187,8 +187,9 @@ i {
   margin-top: 20px;
   justify-content: center;
   width: 100%;
-  background-color: rgb(245, 245, 245,.3);
+  background-color: rgba(233, 233, 233, 0.3);
   box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.5);
+  padding-right: 30px;
 }
 .content {
   height: 20rem;
@@ -198,7 +199,6 @@ i {
   outline: none;
   transition: ease-in 2s;
   background-color: white;
-  padding-left: 30px;
   border-top: 3px solid rgb(233, 233, 233, .7);
   border-bottom: 3px solid rgb(240, 240, 240, .7);
 }
@@ -220,10 +220,11 @@ i {
   background-color: var(--secondary);
   width: 20%;
   bottom: -30px;
-  left: 15rem;
+  left: 13rem;
   border: none;
   border-radius: 5px;
-  box-shadow: 0px 0px 20px rgb(138, 138, 138,.7) ;
+  box-shadow: 0px 0px 20px rgb(138, 138, 138,.7);
+  min-width: 150px;
 }
 .edit {
   padding: 10px;
