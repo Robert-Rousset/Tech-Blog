@@ -7,7 +7,6 @@ router.get("/", withAuth, async (req, res) => {
     include: [{ model: Blog }],
   });
   const user = userData.get({ plain: true });
-  console.log(user);
   res.render("dashboard", { user, loggedIn: req.session.loggedIn });
 });
 

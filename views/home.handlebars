@@ -7,9 +7,8 @@
 
           <h2>{{blog.title}}</h2>
           <p>
-            <i><b class="date">
-                {{format_date blog.createdAt}},
-                {{format_time blog.createdAt}}</b></i>
+            <i><b class="date">Posted on:
+                {{format_date blog.createdAt}}</b></i>
           </p>
 
         </aside>
@@ -20,6 +19,9 @@
           {{blog.content}}
         </p>
         <br />
+      <p class="by">
+-{{blog.user.username}}
+      </p>
       </div>
     </div>
   {{/each}}

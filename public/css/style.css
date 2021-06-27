@@ -249,9 +249,14 @@ i {
   text-shadow: 0px 0px 10px white;
   transition: ease-in-out 0.5s;
 }
+.page{
+  display: flex;
+  flex-wrap: wrap;
+
+}
 .login {
   margin: auto;
-  width: 40%;
+  width:40rem;
   height: fit-content;
   padding: 30px;
   background-color: white;
