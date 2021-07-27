@@ -1,7 +1,11 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
- # Tech-Blog
+
+# Tech-Blog
+
 ## Description
-Here is a fully functional blog for people in the tech industry! It makes use of sequelize to deliver a responsive experience to each unique user. A user is able to create, edit and delete posts while also being able to comment on other users posts. 
+
+Here is a fully functional blog for people in the tech industry! It makes use of sequelize to deliver a responsive experience to each unique user. A user is able to create, edit and delete posts while also being able to comment on other users posts.
+
 ## Table of Contents
 
 [Usage](#usage)
@@ -17,6 +21,9 @@ Here is a fully functional blog for people in the tech industry! It makes use of
 [Questions](#questions)
 
 ## Usage
+
+The application is deployed to heroku at: https://bobbies-tech-blog.herokuapp.com/
+
 To use this application, just sign in, then go to the dashboard to create a new post!
 
 ## Screenshots
@@ -28,12 +35,16 @@ To use this application, just sign in, then go to the dashboard to create a new 
 ![Screenshot-Update](./public/images/screenshots/update.png)
 ![Screenshot-Login](./public/images/screenshots/login.png)
 
-
 ## License
+
 This project is licensed under the MIT license.
+
 ## Contribute
+
 Anyone is free to contribute however they like
+
 ## Tests
 
 ## Questions
- If you have any questions please visit my GitHub at https://github.com/robert-rousset or email me at robertrousset94@gmail.com.
+
+If you have any questions please visit my GitHub at https://github.com/robert-rousset or email me at robertrousset94@gmail.com.
