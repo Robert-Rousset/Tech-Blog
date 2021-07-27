@@ -41,7 +41,7 @@ This project is licensed under the MIT license.
 
 ## Contribute
 
-Anyone is free to contribute however they like
+Anyone is free to contribute however they like.
 
 ## Tests
 
